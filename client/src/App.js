@@ -34,12 +34,10 @@ function App() {
     }
   }, [])
 
-  console.log("user:", user);
-  console.log("token:", token);
   return (
     <div className="App">
       {
-        token ? <Player /> : <Login />
+        token ? <Player spotify={spotify} /> : <Login />
       }
     </div>
   );

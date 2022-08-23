@@ -67,5 +67,13 @@
 
 .sidebarOption {
   color: grey;
+  height: 40px;
+  cursor: pointer;
+  -webkit-transition: 200ms color ease-in;
+  transition: 200ms color ease-in;
+}
+
+.sidebarOption:hover {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

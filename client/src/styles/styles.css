@@ -38,11 +38,23 @@
 }
 
 .sidebar .sidebar__logo {
-  height: 70px;
+  height: 40px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: auto;
   padding: 10px;
+}
+
+.sidebar .sidebar__title {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.sidebar hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .body {
@@ -66,6 +78,12 @@
 }
 
 .sidebarOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: grey;
   height: 40px;
   cursor: pointer;
@@ -75,5 +93,16 @@
 
 .sidebarOption:hover {
   color: white;
+}
+
+.sidebarOption .sidebarOption__icon {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sidebarOption p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=styles.css.map */

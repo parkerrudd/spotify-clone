@@ -12,17 +12,19 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            <img className="sidebar__logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo" />
-
-            <SidebarOption Icon={HomeIcon} title="Home" />
-            <SidebarOption Icon={SearchIcon} title="Search" />
-            <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
-
-            <br />
-            <strong className="sidebar__title">PLAYLISTS</strong>
-            <hr />
-                
-            { playlists?.items?.map((playlist, i) => <SidebarOption key={i} title={playlist.name} />) }
+            <div className="sidebar__top">
+                <img className="sidebar__logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo" />
+                <SidebarOption Icon={HomeIcon} title="Home" />
+                <SidebarOption Icon={SearchIcon} title="Search" />
+                <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
+                <br />
+                <strong className="sidebar__title">PLAYLISTS</strong>
+                <hr />
+            </div>
+            
+            <div className="sidebar__bottom">  
+                { playlists?.items?.map((playlist, i) => <SidebarOption key={i} title={playlist.name} />) }
+             </div>
       
 
         </div>

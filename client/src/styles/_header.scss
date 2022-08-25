@@ -10,12 +10,13 @@
         border-radius: 30px;
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding: 5px;
         min-width: 80px;
         max-width: 210px;
 
         input {
             border: none;
+            outline: none;
             width: 100%;
         }
     }

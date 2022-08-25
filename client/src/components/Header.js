@@ -8,7 +8,7 @@ import { useDataLayerValue } from "../DataLayer";
 function Header() {
 
     const [{ user }] = useDataLayerValue()
-    console.log('user', user)
+    
     return (
         <div className="header">
             <div className="header__left">
@@ -17,7 +17,7 @@ function Header() {
             </div>
 
             <div className="header__right">
-                <Avatar src="" alt="PR" />
+                <Avatar src={user?.images[0]?.url} alt="PR" />
                 <h4> {user?.display_name} </h4>
             </div>
         </div>

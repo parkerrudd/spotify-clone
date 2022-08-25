@@ -7,15 +7,17 @@
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
+    justify-content:flex-start;
     flex-direction: column;
 
     .sidebar__top {
-        flex: .3;
+        // flex: .3;
     }
 
     .sidebar__bottom {
-        flex: .6;
+        flex: .9;
         overflow-y: scroll;
+        // justify-content: flex-start;
     }
 
     .sidebar__logo {

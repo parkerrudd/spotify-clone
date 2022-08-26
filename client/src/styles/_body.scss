@@ -29,4 +29,29 @@
             font-size: 14px;
         }
     }
+
+    .body__songs {
+        margin: 20px -30px;
+    }
+
+    .body__icons {
+        display: flex;
+        align-items: center;
+
+        .body__shuffle {
+            font-size: 80px !important;
+            margin-left: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: .1s transform ease-in;
+
+            &:hover {
+                transform: scale(1.08);
+            }
+        }
+    }
+
+    .MuiSvgIcon-root {
+        margin-right: 20px;
+    }
 }

@@ -1,0 +1,11 @@
+.songs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 20px;
+
+    img {
+        height: 4vw;
+        object-fit: contain;
+    }
+}

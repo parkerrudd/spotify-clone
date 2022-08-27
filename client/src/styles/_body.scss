@@ -1,7 +1,7 @@
 .body {
     flex: .8;
     background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
-    height: 80vh;
+    height: 85vh;
     color: white;
     padding: 30px;
     overflow-y: scroll;
@@ -52,13 +52,10 @@
         }
     }
 
-    .MuiSvgIcon-root {
-        margin-right: 20px;
-    }
-
     .body__heart, 
     .body__moreInfo {
-        color: grey;
+        margin: 0 15px;
+        color: rgb(157, 155, 155);
         transition: .1s;
 
         &:hover {

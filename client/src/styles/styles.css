@@ -84,7 +84,7 @@
           flex: .8;
   background: -webkit-gradient(linear, left top, left bottom, from(#5b5773), to(black));
   background: linear-gradient(#5b5773, black);
-  height: 80vh;
+  height: 85vh;
   color: white;
   padding: 30px;
   overflow-y: scroll;
@@ -149,13 +149,10 @@
           transform: scale(1.08);
 }
 
-.body .MuiSvgIcon-root {
-  margin-right: 20px;
-}
-
 .body .body__heart,
 .body .body__moreInfo {
-  color: grey;
+  margin: 0 15px;
+  color: #9d9b9b;
   -webkit-transition: .1s;
   transition: .1s;
 }
@@ -174,7 +171,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   bottom: 0;
-  height: 10vh;
+  height: 8vh;
   width: 97%;
   background-color: #282828;
   padding: 20px;
@@ -352,6 +349,12 @@
   text-align: left;
   -webkit-transition: .05s ease-in;
   transition: .05s ease-in;
+  max-width: 100%;
+}
+
+.songs:hover {
+  background-color: rgba(133, 113, 113, 0.3);
+  border-radius: 5px;
 }
 
 .songs * {
@@ -371,12 +374,25 @@
   color: #bbb8b8;
 }
 
-.songs:hover {
-  background-color: rgba(133, 113, 113, 0.3);
-  border-radius: 5px;
-}
-
 .songs .songs__number {
   margin-right: -200px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.songs .songs__number:hover {
+  color: white;
+}
+
+.songs .song__title,
+.songs .song__artist,
+.songs .song__album {
+  cursor: pointer;
+}
+
+.songs .song__title:hover,
+.songs .song__artist:hover,
+.songs .song__album:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

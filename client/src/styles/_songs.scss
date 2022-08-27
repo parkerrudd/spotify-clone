@@ -5,6 +5,13 @@
     margin: 0 20px;
     text-align: left;
     transition: .05s ease-in;
+    max-width: 100%;
+
+
+    &:hover {
+        background-color: rgba(133, 113, 113, 0.3);
+        border-radius: 5px;
+    }
 
     * {
         padding: 5px 5px;
@@ -18,15 +25,24 @@
 
     p {
         color: rgb(187, 184, 184);
-        // outline: 1px solid white;
-    }
-
-    &:hover {
-        background-color: rgba(133, 113, 113, 0.3);
-        border-radius: 5px;
     }
 
     .songs__number {
         margin-right: -200px;
+        transition: .1s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .song__title, 
+    .song__artist,
+    .song__album {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

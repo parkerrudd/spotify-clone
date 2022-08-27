@@ -1,3 +1,3 @@
 # Spotify Clone
 
-## This is a Spotify Clone being built with React.js
+## This is a Spotify Clone built using React.js and the Spotify Web API

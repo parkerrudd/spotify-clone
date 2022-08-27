@@ -382,6 +382,7 @@
 
 .songs .songs__number:hover {
   color: white;
+  cursor: pointer;
 }
 
 .songs .song__title,

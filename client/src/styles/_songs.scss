@@ -2,10 +2,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5px 20px;
+    margin: 0 20px;
+    text-align: left;
+    transition: .05s ease-in;
+
+    * {
+        padding: 5px 5px;
+        flex: .2;
+    }
 
     img {
         height: 4vw;
         object-fit: contain;
+    }
+
+    p {
+        color: rgb(187, 184, 184);
+        // outline: 1px solid white;
+    }
+
+    &:hover {
+        background-color: rgba(133, 113, 113, 0.3);
+        border-radius: 5px;
+    }
+
+    .songs__number {
+        margin-right: -200px;
     }
 }

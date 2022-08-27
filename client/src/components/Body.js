@@ -29,11 +29,11 @@ function Body({ spotify }) {
             <div className="body__songs">
                 <div className="body__icons">
                     <PlayCircleIcon className="body__shuffle" />
-                    <FavoriteIcon fontSize="large" />
-                    <MoreHorizIcon />
+                    <FavoriteIcon className="body__heart" fontSize="large" />
+                    <MoreHorizIcon className="body__moreInfo" />
                 </div>    
 
-                {discover_weekly?.tracks?.items.map((song, i) => <Songs key={i} Artwork={song.track.album.images[0].url} Title={song.track.name} Artist={song.track.artists[0].name} Album={song.track.album.name}/>) }
+                {discover_weekly?.tracks?.items.map((song, i) => <Songs key={i} Artwork={song.track.album.images[0].url} Title={song.track.name} Artist={song.track.artists[0].name} Album={song.track.album.name} Duration={song.track.duration_ms} Number={i + 1}/>) }
                 
             </div>
 

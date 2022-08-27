@@ -84,9 +84,10 @@
           flex: .8;
   background: -webkit-gradient(linear, left top, left bottom, from(#5b5773), to(black));
   background: linear-gradient(#5b5773, black);
-  height: 90vh;
+  height: 80vh;
   color: white;
   padding: 30px;
+  overflow-y: scroll;
 }
 
 .body .body__info {
@@ -150,6 +151,18 @@
 
 .body .MuiSvgIcon-root {
   margin-right: 20px;
+}
+
+.body .body__heart,
+.body .body__moreInfo {
+  color: grey;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.body .body__heart:hover,
+.body .body__moreInfo:hover {
+  color: white;
 }
 
 .footer {
@@ -335,12 +348,35 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5px 20px;
+  margin: 0 20px;
+  text-align: left;
+  -webkit-transition: .05s ease-in;
+  transition: .05s ease-in;
+}
+
+.songs * {
+  padding: 5px 5px;
+  -webkit-box-flex: .2;
+      -ms-flex: .2;
+          flex: .2;
 }
 
 .songs img {
   height: 4vw;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.songs p {
+  color: #bbb8b8;
+}
+
+.songs:hover {
+  background-color: rgba(133, 113, 113, 0.3);
+  border-radius: 5px;
+}
+
+.songs .songs__number {
+  margin-right: -200px;
 }
 /*# sourceMappingURL=styles.css.map */

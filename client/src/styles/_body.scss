@@ -1,9 +1,10 @@
 .body {
     flex: .8;
     background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
-    height: 90vh;
+    height: 80vh;
     color: white;
     padding: 30px;
+    overflow-y: scroll;
 
     .body__info {
         display: flex;
@@ -53,5 +54,15 @@
 
     .MuiSvgIcon-root {
         margin-right: 20px;
+    }
+
+    .body__heart, 
+    .body__moreInfo {
+        color: grey;
+        transition: .1s;
+
+        &:hover {
+            color: white;
+        }
     }
 }

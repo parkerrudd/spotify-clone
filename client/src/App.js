@@ -38,12 +38,20 @@ function App() {
         })
       })
 
-      spotify.getPlaylist('4ePdaQklzFSjRSbay84KnA').then(response => {
+      spotify.getPlaylist('37i9dQZEVXcQ9COmYvdajy').then(response => {
         dispatch({
           type: 'SET_DISCOVER_WEEKLY', 
           discover_weekly: response
         })
       })
+
+      spotify.getTrack("7a8puGVFg3URxm0tsXUs6d").then((track) => {
+            dispatch({
+                type: 'SET_TRACK', 
+                track
+            })
+      })
+      
 
     }
   }, [])

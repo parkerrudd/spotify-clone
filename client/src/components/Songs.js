@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { useDataLayerValue } from "../DataLayer";
 
-function Songs({ Artwork, Title, Artist, Album, Duration, Number }) {
+function Songs({ Artwork, Title, Artist, Album, Duration, Number, spotify, track_id }) {
+
+    const [ { track } ,  dispatch] = useDataLayerValue()
 
     const [time, setTime] = useState('')
     const [playButton, setPlayButton] = useState(false)
@@ -14,7 +17,12 @@ function Songs({ Artwork, Title, Artist, Album, Duration, Number }) {
     }, [])
 
     const playSong = () => {
-
+        spotify.getTrack(track_id).then(response => {
+            dispatch({
+                type: 'SET_TRACK', 
+                track: response
+            })
+        })
     }
 
     return (

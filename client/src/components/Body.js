@@ -11,8 +11,6 @@ function Body({ spotify }) {
 
     const [{ discover_weekly }] = useDataLayerValue(); 
 
-    console.log(discover_weekly?.tracks)
-
     return (
         <div className="body"> 
             <Header spotify={spotify} />
@@ -33,7 +31,7 @@ function Body({ spotify }) {
                     <MoreHorizIcon className="body__moreInfo" />
                 </div>    
 
-                {discover_weekly?.tracks?.items.map((song, i) => <Songs key={i} Artwork={song.track.album.images[0].url} Title={song.track.name} Artist={song.track.artists[0].name} Album={song.track.album.name} Duration={song.track.duration_ms} Number={i + 1}/>) }
+                {discover_weekly?.tracks?.items.map((song, i) => <Songs spotify={spotify} track_id={song.track.id} key={i} Artwork={song.track.album.images[0].url} Title={song.track.name} Artist={song.track.artists[0].name} Album={song.track.album.name} Duration={song.track.duration_ms} Number={i + 1}/>) }
                 
             </div>
 

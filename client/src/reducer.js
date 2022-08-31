@@ -3,7 +3,9 @@ export const initialState = {
     playlists: [], 
     playing: false, 
     item: null, 
-    track: null
+    track: null,
+    liked: [], 
+    discover_weekly: null
     //Remove after development 
     // token: "BQDNxazrehJJoFeH4jmZ2O8JeWiadMXVl_rPXfM85N50U6w-8997NLMckpgZxCy498oS4HWbLi6xq-OsoWemBT5b4xkNc-m9BSg1kOlM200G7v58Wc2UpHoKNy8HXAFTUTLK1aDKTmb3I7D0_lsxCUcdKSDWKhMH4T81jRi4wHi6Rdvdr2It2k3qiY80dJkSky4gKtvSA9W5ORExhugb"
 }
@@ -36,6 +38,11 @@ const reducer = (state, action) => {
             return {
                 ...state, 
                 track: action.track
+            }
+        case 'SET_LIKED': 
+            return {
+                ...state, 
+                liked: action.liked
             }
         default: 
             return state    

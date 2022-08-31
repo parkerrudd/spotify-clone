@@ -10,8 +10,8 @@ function Songs({ Artwork, Title, Artist, Album, Duration, Number, spotify, track
     const [playButton, setPlayButton] = useState(false)
 
     useEffect(() => {
-        var minutes = Math.floor(Duration / 60000);
-        var seconds = ((Duration % 60000) / 1000).toFixed(0);
+        const minutes = Math.floor(Duration / 60000);
+        const seconds = ((Duration % 60000) / 1000).toFixed(0);
         setTime(minutes.toString() + ":" + (seconds < 10 ? '0' : '') + seconds.toString());
         
     }, [])

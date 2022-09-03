@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import './App.css';
 import Login from "./components/Login";
 import { getTokenFromUrl } from "./spotify";
@@ -9,7 +9,7 @@ import { DataLayer, useDataLayerValue } from "./DataLayer";
 const spotify = new SpotifyWebApi()
 
 function App() {
-  const [{ token, playlists }, dispatch] = useDataLayerValue()
+  const [{ token }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
     const hash = getTokenFromUrl()

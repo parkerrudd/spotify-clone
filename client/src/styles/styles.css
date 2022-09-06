@@ -350,6 +350,7 @@
   -webkit-transition: .05s ease-in;
   transition: .05s ease-in;
   max-width: 100%;
+  min-width: 70%;
 }
 
 .songs:hover {
@@ -394,5 +395,14 @@
 .songs .song__artist:hover,
 .songs .song__album:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 925px) {
+  .songs {
+    text-align: center;
+  }
+  .songs__number {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

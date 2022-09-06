@@ -33,8 +33,8 @@ function Footer() {
                 <SkipPreviousIcon className="footer__icon" />
                 
                 <div class="play__track" onClick={() => setPlaying(!playing)}>
-                    { playing ? <PauseCircleOutlineIcon fontsize="large" className="footer__icon" /> : 
-                     <PlayCircleOutlineIcon fontsize="large" className="footer__icon" /> 
+                    { playing ? <PauseCircleOutlineIcon fontSize="large" className="footer__icon" /> : 
+                     <PlayCircleOutlineIcon fontSize="large" className="footer__icon" /> 
                     }
                 </div>
 

@@ -4,12 +4,12 @@ import Login from "./components/Login";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./components/Player";
-import { DataLayer, useDataLayerValue } from "./DataLayer";
+import { useDataLayerValue } from "./DataLayer";
 
 const spotify = new SpotifyWebApi()
 
 function App() {
-  const [{ token }, dispatch] = useDataLayerValue()
+  const [{ playlists, token }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
     const hash = getTokenFromUrl()
@@ -38,13 +38,6 @@ function App() {
         })
       })
 
-      spotify.getPlaylist("37i9dQZEVXcQ9COmYvdajy").then(response => {
-        dispatch({
-          type: 'SET_DISCOVER_WEEKLY', 
-          discover_weekly: response
-        })
-      })
-
       spotify.getTrack("7a8puGVFg3URxm0tsXUs6d").then((track) => {
             dispatch({
                 type: 'SET_TRACK', 
@@ -62,6 +55,17 @@ function App() {
 
     }
   }, [])
+
+  setTimeout(() => {
+    spotify.getPlaylist(playlists?.items[0]?.id).then(response => {
+      dispatch({
+        type: 'SET_DISCOVER_WEEKLY', 
+        discover_weekly: response
+      })
+    })
+   
+  }, 10)
+
 
   return (
     <div className="App">

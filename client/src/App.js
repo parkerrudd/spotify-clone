@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useMemo} from "react";
 import './App.css';
 import Login from "./components/Login";
 import { getTokenFromUrl } from "./spotify";
@@ -56,15 +56,17 @@ function App() {
     }
   }, [])
 
-  setTimeout(() => {
-    spotify.getPlaylist(playlists?.items[0]?.id).then(response => {
-      dispatch({
-        type: 'SET_DISCOVER_WEEKLY', 
-        discover_weekly: response
+  useMemo(() => {
+    setTimeout(() => {
+      spotify.getPlaylist(playlists?.items[0]?.id).then(response => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY', 
+          discover_weekly: response
+        })
       })
-    })
-   
-  }, 10)
+     
+    }, 10)
+  }, [playlists])
 
 
   return (
